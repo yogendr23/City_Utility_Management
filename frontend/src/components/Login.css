@@ -1,0 +1,81 @@
+/* General styles for the login container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height for centering */
+  background-color: #f5f5f5; /* Light background */
+  padding: 20px; /* Padding around the container */
+}
+
+/* Styles for the form */
+.login-form {
+  background-color: white; /* White background for the form */
+  padding: 30px; /* Padding inside the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 100%; /* Full width for mobile */
+  max-width: 400px; /* Maximum width for larger screens */
+}
+
+/* Heading style */
+.login-form h2 {
+  margin-bottom: 20px; /* Space below the heading */
+  text-align: center; /* Center the heading */
+}
+
+/* Error message style */
+.error-message {
+  color: red; /* Red color for error messages */
+  margin-bottom: 15px; /* Space below error message */
+}
+
+/* Input field styles */
+input[type="email"],
+input[type="password"] {
+  width: 100%; /* Full width for inputs */
+  padding: 12px; /* Padding inside inputs */
+  margin-bottom: 15px; /* Space between inputs */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 16px; /* Font size */
+}
+
+/* Button style */
+.login-button {
+  width: 100%; /* Full width for the button */
+  padding: 12px; /* Padding inside the button */
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.login-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Register prompt styles */
+.register-prompt {
+  margin-top: 15px; /* Space above the register prompt */
+  text-align: center; /* Center the prompt text */
+}
+
+.register-button {
+  background-color: #28a745; /* Green color for register button */
+  color: white; /* Text color */
+  border: none; /* No border */
+  padding: 10px 15px; /* Padding inside register button */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.register-button:hover {
+  background-color: #218838; /* Darker shade on hover */
+}

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: location-service
+  labels:
+    app: location-service
+spec:
+  replicas: 1  # Number of instances (adjust as needed)
+  selector:
+    matchLabels:
+      app: location-service
+  template:
+    metadata:
+      labels:
+        app: location-service
+    spec:
+      containers:
+        - name: location-service-container
+          image: location-service:latest  # Replace with your exact image name if needed
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5002  # Port exposed by the Docker container

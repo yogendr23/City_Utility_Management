@@ -1,0 +1,141 @@
+/* EmployeeManagement.css */
+.employee-management-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f4f4f9; /* Light background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.employee-list {
+  flex: 1;
+  margin-right: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 600px; /* Limit height to show 4 employees */
+  overflow-y: auto; /* Enable scrolling */
+  min-width: 300px; /* Ensure minimum width for better alignment */
+}
+
+.employee-list h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #333;
+}
+
+.employee-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.register-form {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 300px; /* Ensure minimum width for better alignment */
+}
+
+.register-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+
+.error-message {
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .employee-management-container {
+    flex-direction: column; /* Stack the sections vertically on smaller screens */
+    gap: 20px;
+  }
+
+  .employee-list, .register-form {
+    width: 100%; /* Make sections full width on small screens */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .employee-item {
+    font-size: 14px; /* Reduce font size in employee list for mobile */
+  }
+
+  .employee-list h2, .register-form h2 {
+    font-size: 20px; /* Smaller headers on mobile */
+  }
+
+  .form-input {
+    font-size: 14px; /* Smaller font size for input fields */
+  }
+
+  .submit-button {
+    font-size: 14px; /* Smaller button text */
+    padding: 12px; /* Slightly larger padding for touch screens */
+  }
+}
+
+/* Tablet-specific styles */
+@media (max-width: 1024px) {
+  .employee-list, .register-form {
+    width: 48%; /* Two columns on tablets */
+  }
+
+  .employee-management-container {
+    justify-content: space-between;
+    gap: 20px;
+  }
+}

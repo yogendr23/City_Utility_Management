@@ -1,0 +1,166 @@
+/* ProfileUpdate.css */
+
+.profile-update-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height to center content */
+    background: url('https://source.unsplash.com/random/1920x1080/?color,fun') no-repeat center center fixed; /* Fun wallpaper */
+    background-size: cover; /* Cover background */
+    padding: 20px;
+  }
+  
+  .profile-update-card {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 15px; /* Rounded corners */
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+    animation: slideIn 0.5s ease; /* Slide in animation */
+  }
+  
+  .profile-update-title {
+    text-align: center;
+    color: #333;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+    margin-bottom: 20px;
+  }
+  
+  .profile-update-error {
+    color: #d9534f; /* Error color */
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .profile-update-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-update-form-group {
+    margin-bottom: 20px;
+  }
+  
+  .profile-update-label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .profile-update-input {
+    padding: 12px;
+    border: 2px solid #007bff; /* Primary color border */
+    border-radius: 10px; /* Rounded edges */
+    font-size: 16px;
+    transition: border-color 0.3s; /* Smooth transition */
+  }
+  
+  .profile-update-input:focus {
+    border-color: #0056b3; /* Darker blue when focused */
+    outline: none; /* No outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Light shadow on focus */
+  }
+  
+  .profile-update-button {
+    padding: 12px;
+    background-color: #28a745; /* Success color */
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* Rounded edges */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+  }
+  
+  .profile-update-button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+  
+  /* Animation for card appearance */
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .profile-delete-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    color: #e74c3c;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .profile-delete-icon:hover {
+    color: #c0392b; /* Darker color on hover */
+  }
+  
+  .profile-delete-icon svg {
+    pointer-events: none; /* Prevents icon-specific hover issues */
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 10px;
+  }
+  
+  .modal-content p {
+    margin-bottom: 20px;
+  }
+  
+  .modal-content button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-content button:first-of-type {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .modal-content button:first-of-type:hover {
+    background-color: #c0392b;
+  }
+  
+  .modal-content button:last-of-type {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .modal-content button:last-of-type:hover {
+    background-color: #2980b9;
+  }
+  

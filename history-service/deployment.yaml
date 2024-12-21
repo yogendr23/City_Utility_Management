@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: history-service
+  labels:
+    app: history-service
+spec:
+  replicas: 1  # Number of instances (can be increased if needed)
+  selector:
+    matchLabels:
+      app: history-service
+  template:
+    metadata:
+      labels:
+        app: history-service
+    spec:
+      containers:
+        - name: history-service-container
+          image: history-service  # Replace with the correct image name
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5006  # The port exposed by the application in the Dockerfile

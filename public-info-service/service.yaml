@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: public-info-service
+spec:
+  selector:
+    app: public-info-service  # This must match the label in the Deployment
+  ports:
+    - protocol: TCP
+      port: 80         # The port on which the service will be accessible
+      targetPort: 5004 # The port the container is listening on
+  type: ClusterIP  # Internal access within the cluster; change to NodePort if external access is needed

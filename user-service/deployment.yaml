@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+  labels:
+    app: user-service
+spec:
+  replicas: 1  # Number of instances (adjust as needed)
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      containers:
+        - name: user-service-container
+          image: user-service:latest  # Replace with the exact image name if different
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000  # Port exposed by the Docker container

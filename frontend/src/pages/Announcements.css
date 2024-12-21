@@ -1,0 +1,298 @@
+/* General Container */
+.announcement-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fffbf1; /* Light cheerful background */
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header */
+.announcement-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.announcement-user-info {
+  text-align: right;
+  flex: 1;
+}
+
+.announcement-logout-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #f44336; /* Red for logout */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.announcement-logout-button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Title */
+.announcement-title {
+  font-size: 2.5rem;
+  color: #ff6f61; /* Cheerful color */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  flex-basis: 100%;
+}
+
+/* Form Section */
+.announcement-form-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.announcement-form-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.announcement-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.announcement-input,
+.announcement-select,
+.announcement-date-input {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: border-color 0.2s;
+}
+
+.announcement-input:focus,
+.announcement-select:focus,
+.announcement-date-input:focus {
+  border-color: #ff6f61; /* Highlight on focus */
+}
+
+.announcement-textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  min-height: 100px;
+}
+
+.announcement-form-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.announcement-submit-button,
+.announcement-cancel-button {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.announcement-submit-button {
+  background-color: #28a745; /* Green for create/update */
+  color: #fff;
+}
+
+.announcement-cancel-button {
+  background-color: #ff8c00; /* Orange for cancel */
+  color: #fff;
+}
+
+.announcement-submit-button:hover,
+.announcement-cancel-button:hover {
+  transform: scale(1.05); /* Scale on hover for interaction feedback */
+}
+
+/* Notifications */
+.announcement-error,
+.announcement-success {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.announcement-error {
+  color: #d9534f; /* Error color */
+}
+
+.announcement-success {
+  color: #5cb85c; /* Success color */
+}
+
+/* Announcement List */
+.announcement-list {
+  list-style: none;
+  padding: 0;
+}
+
+.announcement-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.announcement-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.announcement-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.announcement-card-title {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.announcement-card-type {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.announcement-card-dates {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.announcement-card-dates p {
+  margin: 0.5rem 0;
+}
+
+.announcement-card-content {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.announcement-card-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.announcement-edit-button,
+.announcement-delete-button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.announcement-edit-button {
+  background-color: #28a745; /* Green for edit */
+  color: #fff;
+}
+
+.announcement-delete-button {
+  background-color: #dc3545; /* Red for delete */
+  color: #fff;
+}
+
+.announcement-edit-button:hover,
+.announcement-delete-button:hover {
+  transform: scale(1.05); /* Scale on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .announcement-container {
+    padding: 1rem;
+  }
+
+  .announcement-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .announcement-title {
+    font-size: 2rem;
+  }
+
+  .announcement-form-group {
+    flex-direction: column;
+  }
+
+  .announcement-form-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .announcement-submit-button,
+  .announcement-cancel-button {
+    width: 100%;
+  }
+
+  .announcement-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .announcement-card-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .announcement-card-content {
+    font-size: 0.95rem;
+  }
+}
+
+/* For small mobile devices */
+@media screen and (max-width: 480px) {
+  .announcement-title {
+    font-size: 1.8rem;
+  }
+
+  .announcement-card-header {
+    text-align: left;
+  }
+
+  .announcement-card-title {
+    font-size: 1.3rem;
+  }
+
+  .announcement-card-content {
+    font-size: 0.9rem;
+  }
+
+  .announcement-submit-button,
+  .announcement-cancel-button {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .announcement-edit-button,
+  .announcement-delete-button {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}

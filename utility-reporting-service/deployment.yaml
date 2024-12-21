@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: utility-reporting-service
+  labels:
+    app: utility-reporting-service
+spec:
+  replicas: 1  # Number of instances (adjust as needed)
+  selector:
+    matchLabels:
+      app: utility-reporting-service
+  template:
+    metadata:
+      labels:
+        app: utility-reporting-service
+    spec:
+      containers:
+        - name: utility-reporting-service-container
+          image: utility-reporting-service:latest  # Replace with the correct image name if different
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5001  # Port exposed by the Docker container

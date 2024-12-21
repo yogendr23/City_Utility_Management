@@ -1,0 +1,50 @@
+.RegisterEmployeePopup-overlay {
+    position: fixed; /* Fixed positioning for overlay */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 1000; /* Ensure modal is on top */
+  }
+  
+  .RegisterEmployeePopup-content {
+    background-color: white; /* Set background color to white */
+    padding: 20px; /* Add padding inside modal */
+    border-radius: 8px; /* Round the corners of the modal */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+    text-align: center; /* Center text in modal */
+    width: 90%; /* Full width on small screens */
+    max-width: 400px; /* Maximum width for larger screens */
+  }
+  
+  .RegisterEmployeePopup-message {
+    margin-bottom: 20px; /* Space below the message */
+    font-size: 18px; /* Font size for the message */
+    color: #333; /* Dark color for better readability */
+  }
+  
+  .RegisterEmployeePopup-actions {
+    display: flex; /* Use flexbox for action buttons */
+    justify-content: space-around; /* Space out buttons */
+  }
+  
+  .RegisterEmployeePopup-close-btn, 
+  .RegisterEmployeePopup-action-btn {
+    padding: 10px 15px; /* Add padding inside buttons */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Round corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  .RegisterEmployeePopup-close-btn:hover, 
+  .RegisterEmployeePopup-action-btn:hover {
+    background-color: #0056b3; /* Darken button on hover */
+  }
+  

@@ -1,0 +1,229 @@
+/* AdminDashboard.css */
+.AdminDashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.AdminDashboard-user-info {
+  text-align: right;
+}
+
+.AdminDashboard-logout-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #f44336; /* Red for logout */
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.AdminDashboard-logout-button:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+
+.AdminDashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.AdminDashboard-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.AdminDashboard-employee-selection {
+  margin-bottom: 20px;
+}
+
+.AdminDashboard-select {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.AdminDashboard-assign-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  margin-left: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.AdminDashboard-assign-button:hover {
+  background-color: #0056b3;
+}
+
+.AdminDashboard-reports-title {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.AdminDashboard-report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.AdminDashboard-report-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.AdminDashboard-report-item:hover {
+  transform: translateY(-2px);
+}
+
+.AdminDashboard-report-checkbox {
+  margin-right: 10px;
+}
+
+.AdminDashboard-description-box {
+  max-height: 100px; /* Set maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  /* overflow-x: auto; Hide horizontal overflow */
+  margin: 10px 0;
+  border: 1px solid #ccc; /* Optional border for visibility */
+  padding: 5px; /* Optional padding */
+}
+
+.AdminDashboard-not-assigned-pending {
+  border-left: 5px solid #ffc107;
+}
+
+.AdminDashboard-assigned-pending {
+  border-left: 5px solid #007bff;
+}
+
+.AdminDashboard-assigned-in-progress {
+  border-left: 5px solid #17a2b8;
+}
+
+.AdminDashboard-assigned-completed {
+  border-left: 5px solid #28a745;
+}
+
+.AdminDashboard-selected {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.AdminDashboard-unauthorized-message {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.AdminDashboard-redirect-button {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.AdminDashboard-redirect-button:hover {
+  background-color: #c82333;
+}
+
+.AdminDashboard-assign-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.AdminDashboard-assign-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.AdminDashboard-instruction {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.AdminDashboard-employee-selection {
+  margin-bottom: 15px;
+}
+
+.AdminDashboard-select-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.AdminDashboard-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.AdminDashboard-email-option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Remove extra gap between options */
+  margin: 10px 0; /* Optional: Add some margin above and below the group */
+}
+
+.AdminDashboard-email-option {
+  display: flex;
+  align-items: center; /* Align label and input vertically */
+  margin-bottom: 5px; /* Add a small margin below each option */
+}
+
+.AdminDashboard-email-option input {
+  margin-right: 5px; /* Space between radio button and label */
+}
+
+
+.AdminDashboard-assign-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.AdminDashboard-assign-button:hover {
+  background-color: #0056b3;
+}
+
+.AdminDashboard-achieve-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.AdminDashboard-achieve-button:hover {
+  background-color: #0056b3;
+}

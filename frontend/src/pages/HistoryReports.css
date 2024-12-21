@@ -1,0 +1,73 @@
+.ArchivedHistoryReports-container {
+  background-color: #f4f4f9; /* Light background for contrast */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ArchivedHistoryReports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.ArchivedHistoryReports-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.ArchivedHistoryReports-user-info {
+  text-align: right;
+}
+
+.ArchivedHistoryReports-logout-button {
+  background-color: #e63946; /* Red color for logout */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ArchivedHistoryReports-logout-button:hover {
+  background-color: #d62839; /* Darker red on hover */
+}
+
+.ArchivedHistoryReports-list {
+  margin-top: 20px;
+}
+
+.ArchivedHistoryReports-report-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ArchivedHistoryReports-report-type {
+  font-size: 20px;
+  color: #0077b6; /* Blue color for report type */
+}
+
+.ArchivedHistoryReports-report-description {
+  color: #555; /* Dark gray for description */
+}
+
+.ArchivedHistoryReports-report-status,
+.ArchivedHistoryReports-report-assigned,
+.ArchivedHistoryReports-report-dates,
+.ArchivedHistoryReports-report-coordinates,
+.ArchivedHistoryReports-report-user-id {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.ArchivedHistoryReports-no-reports {
+  color: #888; /* Gray for no reports */
+  text-align: center;
+}

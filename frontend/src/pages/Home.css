@@ -1,0 +1,225 @@
+/* Root variables for consistent theming */
+:root {
+  --primary-color: #007bff; /* Primary button color */
+  --primary-color-hover: #0056b3; /* Darker shade on hover */
+  --secondary-color: #7ab8ef; /* Secondary button color */
+  --secondary-color-hover: #0aec2c; /* Secondary hover color */
+  --background-color: #f4f7fa; /* Soft background color */
+  --text-color: #212931; /* Primary text color */
+  --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-heavy: 0 4px 30px rgba(0, 0, 0, 0.2);
+  --tile-border: #ddd;
+}
+
+/* General container styling */
+.home-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: var(--shadow-heavy);
+}
+
+/* Header styles */
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.home-welcome {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+/* Profile button and dropdown */
+.home-profile {
+  position: relative; /* To position dropdown */
+}
+
+.home-profile-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: var(--shadow-light);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-profile-button:hover,
+.home-profile-button:focus {
+  background-color: var(--primary-color-hover);
+  transform: scale(1.1); /* Slight enlargement on hover/focus */
+}
+
+.home-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background: white;
+  border: 1px solid var(--tile-border);
+  border-radius: 5px;
+  box-shadow: var(--shadow-light);
+  z-index: 1000;
+}
+
+.home-dropdown-item {
+  padding: 10px 15px;
+  border: none;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.home-dropdown-item:hover,
+.home-dropdown-item:focus {
+  background-color: #f1f1f1; /* Light hover effect */
+}
+
+/* Welcome message section */
+.home-welcome-message {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #333;
+  box-shadow: var(--shadow-light);
+}
+
+.home-info-text {
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Tile container and individual tiles */
+.home-tile-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px; /* Add spacing between tiles */
+}
+
+.home-tile {
+  background: white;
+  border: 1px solid var(--tile-border);
+  border-radius: 10px;
+  padding: 30px;
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  box-shadow: var(--shadow-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-tile:hover,
+.home-tile:focus-within {
+  transform: translateY(-5px); /* Lift on hover */
+  box-shadow: var(--shadow-heavy);
+}
+
+.home-tile h2 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.home-tile p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Button styles with hover and focus effects */
+.home-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+}
+
+.home-btn.btn-secondary {
+  background-color: var(--secondary-color);
+}
+
+.home-btn.btn-secondary:hover,
+.home-btn.btn-secondary:focus {
+  background-color: var(--secondary-color-hover);
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .home-tile-container {
+    flex-direction: column; /* Stack tiles vertically */
+  }
+
+  .home-tile {
+    margin-bottom: 15px;
+  }
+
+  .home-welcome {
+    font-size: 1.8rem; /* Adjust font size */
+  }
+}
+
+/* Footer styling */
+.home-footer {
+  background-color: #212931; /* Dark footer background */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+  margin-top: 40px; /* Spacing above the footer */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-text {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #7ab8ef; /* Light color on hover/focus */
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    align-items: center;
+  }
+
+  .footer-link {
+    margin-bottom: 10px; /* Space between links */
+  }
+}

@@ -1,0 +1,270 @@
+/* General Styles */
+.reportlist {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Home button */
+.reportlist-home-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.reportlist-home-button:hover {
+  background-color: #0056b3;
+}
+
+/* Title */
+.reportlist-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Loading, Error, No reports message */
+.reportlist-loading, .reportlist-error, .reportlist-no-reports {
+  text-align: center;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Grid container */
+.reportlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Report items */
+.reportlist-item {
+  background-color: #fff;
+  border: 1px solid #e1e1e1;
+  border-radius: 6px;
+  padding: 15px;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover effect on report items */
+.reportlist-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Status color coding */
+.reportlist-status-pending {
+  border-left: 5px solid #ffc107; /* Yellow for pending */
+}
+
+.reportlist-status-in-progress {
+  border-left: 5px solid #17a2b8; /* Teal for in-progress */
+}
+
+.reportlist-status-completed {
+  border-left: 5px solid #28a745; /* Green for completed */
+}
+
+/* Header styles for report items */
+.reportlist-header {
+  margin-bottom: 10px;
+}
+
+.reportlist-type-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reportlist-location {
+  margin-top: 10px;
+}
+
+.reportlist-location ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.reportlist-location li {
+  margin: 5px 0;
+}
+
+.reportlist-description {
+  margin: 10px 0;
+}
+
+.reportlist-description-box {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 4px;
+  max-height: 100px; /* Set max height for scrollable box */
+  overflow-y: auto; /* Enable vertical scrolling */
+  font-size: 14px; /* Adjust font size if necessary */
+}
+
+/* Delete button */
+.reportlist-delete-button {
+  background-color: #c05862;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px; /* Add margin for spacing */
+}
+
+.reportlist-delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Login button */
+.reportlist-login-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: rgb(15, 15, 15);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.reportlist-login-button:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .reportlist {
+    padding: 10px;
+  }
+
+  .reportlist-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .reportlist-home-button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .reportlist-grid {
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    gap: 15px;
+  }
+
+  .reportlist-item {
+    padding: 12px;
+  }
+
+  .reportlist-description-box {
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+
+  .reportlist-delete-button {
+    padding: 8px 12px;
+  }
+
+  .reportlist-location ul {
+    padding-left: 20px;
+  }
+
+  .reportlist-location li {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  .reportlist-history {
+    margin-top: 20px;
+  }
+}
+
+/* Tablet Responsiveness (screens between 768px and 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .reportlist {
+    padding: 15px;
+  }
+
+  .reportlist-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .reportlist-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablet size */
+  }
+
+  .reportlist-description-box {
+    font-size: 13px; /* Adjust font size */
+  }
+
+  .reportlist-location li {
+    font-size: 13px; /* Adjust font size */
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.popup-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.popup-confirm-button {
+  padding: 10px 20px;
+  background: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup-cancel-button {
+  padding: 10px 20px;
+  background: #5bc0de;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup-confirm-button:hover {
+  background: #c9302c;
+}
+
+.popup-cancel-button:hover {
+  background: #31b0d5;
+}

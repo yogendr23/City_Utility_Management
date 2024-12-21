@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: public-info-service
+  labels:
+    app: public-info-service
+spec:
+  replicas: 1  # Number of instances (adjust as needed)
+  selector:
+    matchLabels:
+      app: public-info-service
+  template:
+    metadata:
+      labels:
+        app: public-info-service
+    spec:
+      containers:
+        - name: public-info-service-container
+          image: public-info-service:latest  # Replace with the exact image name if different
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5004  # Port exposed by the Docker container
